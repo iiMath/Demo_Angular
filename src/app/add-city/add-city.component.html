@@ -1,0 +1,25 @@
+<form [formGroup]="cityForm">
+  <div class="form-floating" [ngClass]="{'is-invalid': invalidCityName()}">
+    <input
+      type="text"
+      id="floatingInput"
+      class="form-control"
+      [ngClass]="{'is-invalid': invalidCityName()}"
+      placeholder="Toulouse"
+      formControlName="name">
+    <label for="floatingInput">City</label>
+  </div>
+  <div class="invalid-feedback" *ngIf="invalidCityName()">
+    Name must be at least 2 characters long
+  </div>
+
+  <button (click)="addCity()" class="btn btn-primary mt-3" [disabled]="invalidCityForm()">Add city</button>
+
+</form>
+
+
+
+
+
+
+

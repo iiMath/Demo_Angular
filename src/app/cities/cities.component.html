@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<ol class="list-group my-5">
+  <li *ngFor="let city of cities" class="list-group-item">
+    <i>{{city.uuid}}</i><strong>{{ city.name }}</strong>
+  </li>
+</ol>
+
+<app-add-city></app-add-city>
+
+
